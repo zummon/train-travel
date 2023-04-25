@@ -1,10 +1,11 @@
 <script>
 	export let content
+	console.log(content)
 </script>
 
 <div class="max-w-prose mx-auto">
 	{@html content}
-	<!-- <h1 class="text-center">{title}</h1>
+	<h1 class="text-center">{title}</h1>
 	<p class="text-center">{excerpt}</p>
 	<p>
 		<img
@@ -12,7 +13,6 @@
 			src={thumbnail.src}
 			alt={thumbnail.alt}
 		/>
-	</p> -->
+	</p>
 	<!-- <MDXRemote {...sourceContent} components={mdHtmlParser} /> -->
 </div>
-

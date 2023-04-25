@@ -7,16 +7,18 @@
 		"package": "vite package"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.15.0",
-		"@tailwindcss/typography": "^0.5.2",
+		"gray-matter": "^4.0.3"
+	},
+	"dependencies": {
+		"@sveltejs/adapter-auto": "^2.0.1",
+		"@sveltejs/kit": "^1.15.8",
+		"@tailwindcss/typography": "^0.5.9",
 		"autoprefixer": "^10.4.14",
-		"mdsvex": "^0.10.5",
-		"postcss": "^8.4.21",
-		"prettier": "^2.5.1",
-		"prettier-plugin-svelte": "^2.5.0",
+		"postcss": "^8.4.23",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.10.0",
 		"svelte": "^3.58.0",
 		"tailwindcss": "^3.3.1",
-		"vite": "^4.2.1"
+		"vite": "^4.3.2"
 	}
 }
