@@ -1,4 +1,3 @@
-
 <script>
 	let
 	// blogs= getAllContents('blog')
