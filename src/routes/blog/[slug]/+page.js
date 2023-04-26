@@ -1,8 +1,10 @@
-import { load } from '@sveltejs/kit';
+import matter from 'gray-matter';
 
-export async function load({ params }) {
-	const { content } = await load(`../../../lib/content/blog/${params.slug}.md`);
+export const load = async ({ params }) => {
+	const { content } = matter.read(
+		`../../../lib/content/blog/${params.slug}.md`
+	);
 	return {
-		content
+		content,
 	};
-}
+};
