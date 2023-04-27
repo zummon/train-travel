@@ -1,15 +1,13 @@
 <script>
 	let
-	// blogs: getAllContents('blog').sort((a, b) =>
-	// 	a.date < b.date ? 1 : a.date > b.date ? -1 : 0
-	// )
+	blogs,
 	excerpt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
 	title = 'Blog',
 	thumbnail = {
 		src: '',
 	},
 	date = ''
-	// const categories = [...new Set(blogs.map(({ category }) => category))];
+	const categories = [...new Set(blogs.map(({ category }) => category))];
 </script>
 
 <h1 class="text-center">{title}</h1>
@@ -22,9 +20,10 @@
 		</Fragment>
 	))} -->
 </p>
-<!-- {blogs.map(
-	({ category, date, excerpt, thumbnail, title, slug }, index) => (
-		<div class="sm:flex items-center" key={index}>
+{#each blogs as { category, date, excerpt, thumbnail, title, slug },index (index)}
+
+	
+		<div class="sm:flex items-center" >
 			<div class="flex-1">
 				<img
 					class="w-full object-cover h-56 sm:h-72 md:h-96"
@@ -39,12 +38,12 @@
 				</blockquote>
 				<p>{excerpt}</p>
 				<p>
-					<Link href={`/blog/${slug}`}>
+					<a href={`/blog/${slug}`}>
 						<a>Read more</a>
-					</Link>
+					</a>
 				</p>
 			</div>
 		</div>
-	)
-)} -->
+	
 
+{/each}

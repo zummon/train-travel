@@ -1,6 +1,5 @@
 <script>
 	export let data
-	console.log(data.content)
 </script>
 
 <div class="max-w-prose mx-auto">
@@ -13,6 +12,5 @@
 			alt={data.thumbnail.alt}
 		/>
 	</p>
-	<!-- <MDXRemote {...sourceContent} components={mdHtmlParser} /> -->
-	{@html data.content}
+	<svelte:component this={data.content} />
 </div>
