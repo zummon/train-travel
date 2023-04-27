@@ -1,13 +1,13 @@
 <script>
-	let
-	blogs,
+export let data 
+	let 
 	excerpt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
 	title = 'Blog',
 	thumbnail = {
 		src: '',
 	},
-	date = ''
-	const categories = [...new Set(blogs.map(({ category }) => category))];
+	date = '';
+	const categories = [...new Set(data.blogs.map(({ category }) => category))];
 </script>
 
 <h1 class="text-center">{title}</h1>
@@ -20,7 +20,7 @@
 		</Fragment>
 	))} -->
 </p>
-{#each blogs as { category, date, excerpt, thumbnail, title, slug },index (index)}
+{#each data.blogs as { category, date, excerpt, thumbnail, title, slug },index (index)}
 
 	
 		<div class="sm:flex items-center" >
@@ -39,7 +39,7 @@
 				<p>{excerpt}</p>
 				<p>
 					<a href={`/blog/${slug}`}>
-						<a>Read more</a>
+						Read more
 					</a>
 				</p>
 			</div>

@@ -7,6 +7,7 @@ export const getBlogs = async () => {
 			let content = markdown.default;
 			let metadata = markdown.metadata;
 			let slug = path.split('/').pop().slice(0, -3);
+			console.log(slug);
 
 			result.push({ ...metadata, content, slug });
 		});
