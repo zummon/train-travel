@@ -1,7 +1,7 @@
-import { getBlogs } from '../../lib/getBlogs.js';
+import { getBlogs } from '../../lib/getBlogs';
 
 export const load = async ({}) => {
-	const blogs = getBlogs().sort((a, b) =>
+	const blogs = (await getBlogs()).sort((a, b) =>
 		a.date < b.date ? 1 : a.date > b.date ? -1 : 0
 	);
 
