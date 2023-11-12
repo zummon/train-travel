@@ -1,4 +1,4 @@
-Not yet completed
+Something breaks, needs upgrade. Let me know.
 
 ### Dev tools
 
