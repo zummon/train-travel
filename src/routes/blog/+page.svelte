@@ -13,7 +13,7 @@ export let data
 <p class="text-center">
 	<b>Categories </b>
 	{#each categories as category, index (`cate-${index}`)}
-		<a href="#">{category}</a>
+		<a href="/#">{category}</a>
 		{#if index !== categories.length - 1}
 			<span>, </span> 
 		{/if}
@@ -31,7 +31,7 @@ export let data
 		<div class="flex-1 sm:pl-4">
 			<h2>{title}</h2>
 			<blockquote>
-				<b>Date</b> {date} <b>Category</b> <a href="#">{category}</a>
+				<b>Date</b> {date} <b>Category</b> <a href="/#">{category}</a>
 			</blockquote>
 			<p>{excerpt}</p>
 			<p>

@@ -12,7 +12,7 @@
   </p>
   <h1>{data.title}</h1>
   <p>
-    <b>Date</b> {data.date} <b>Category</b> <a href="#">{data.category}</a>
+    <b>Date</b> {data.date} <b>Category</b> <a href="/#">{data.category}</a>
   </p>
   <p>{data.excerpt}</p>
   <hr />

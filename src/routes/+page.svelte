@@ -20,7 +20,7 @@
 			/>
 			<h2>{title}</h2>
 			<blockquote>
-				<b>Date</b> {date} <b>Category</b> <a href="#">{category}</a>
+				<b>Date</b> {date} <b>Category</b> <a href="/#">{category}</a>
 			</blockquote>
 			<p>{excerpt}</p>
 			<p>

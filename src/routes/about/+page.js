@@ -1,3 +1,5 @@
+export const prerender = true
+
 export const load = async ({}) => {
 	const markdown = await import('../../lib/content/about.md');
 	let content = markdown.default;

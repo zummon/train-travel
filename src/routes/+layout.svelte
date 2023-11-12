@@ -1,9 +1,12 @@
 <script>
 	import '../app.css';
-	import { page } from '$app/stores';
+  export let data
+  let dark = false
 </script>
 
-<svelte:head>
+<svelte:document class={dark ? 'dark' : ''}></svelte:document>
+
+<!-- <svelte:head> -->
 	<!-- <title>{title}</title>
 	<meta property="og:title" content={title} />
 	<meta name="twitter:title" content={title} />
@@ -13,13 +16,15 @@
 	<meta name="twitter:description" content={excerpt} />
 	<meta property="og:image" content={thumbnail.src} />
 	<meta name="twitter:image" content={thumbnail.src} /> -->
-</svelte:head>
+<!-- </svelte:head> -->
 
 <!-- Header -->
 <div class="max-w-screen-lg mx-auto flex flex-wrap items-center mb-8">
 	<div class="flex flex-wrap space-x-4">
-		<h2>{$page.url.pathname === '/' ? '' : 'Train Travel'}</h2>
-		<button on:click={() => {document.documentElement.classList.toggle('dark')}}>
+		<h2>{data.pathname === '/' ? '' : 'Train Travel'}</h2>
+		<button on:click={() => {
+      dark = !dark
+    }}>
 			<!-- Moon icon -->
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden dark:inline" viewBox="0 0 20 20" fill="currentColor">
 				<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
@@ -49,7 +54,7 @@
     </p>
   </div>
   <div class="ml-auto flex flex-wrap space-x-4">
-    <a href="#" class="!no-underline">
+    <a href="/#" class="!no-underline">
       <!-- Facebook -->
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path
@@ -59,7 +64,7 @@
         ></path>
       </svg>
     </a>
-    <a href="#" class="!no-underline">
+    <a href="/#" class="!no-underline">
       <!-- Instagram -->
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path
@@ -69,13 +74,13 @@
         ></path>
       </svg>
     </a>
-    <a href="#" class="!no-underline">
+    <a href="/#" class="!no-underline">
       <!-- Twitter -->
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
       </svg>
     </a>
-    <a href="#" class="!no-underline">
+    <a href="/#" class="!no-underline">
       <!-- GitHub -->
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path
