@@ -1,4 +1,4 @@
-const markdowns = import.meta.glob('./content/blog/*.md');
+const markdowns = import.meta.glob('./blog/*.md');
 
 export const getBlogs = async () => {
 	let result = [];

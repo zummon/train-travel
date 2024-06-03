@@ -3,9 +3,12 @@ import { getBlogs } from '../../lib/getBlogs';
 export const prerender = true
 
 export const load = async ({}) => {
-	const blogs = (await getBlogs()).sort((a, b) =>
-		a.date < b.date ? 1 : a.date > b.date ? -1 : 0
-	);
+	let blogs = (await getBlogs()).slice()
+	blogs.sort((a, b) =>{
+		if (a.date < b.date) { return 1 }
+		if (a.date > b.date ) { return -1 }
+		return 0
+	})
 
 	return { blogs };
 };

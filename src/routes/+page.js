@@ -1,11 +1,16 @@
 import { getBlogs } from '../lib/getBlogs';
+import products from '../lib/products.json'
 
 export const prerender = true
 
 export const load = async ({}) => {
-	const blogs = (await getBlogs()).sort((a, b) =>
-		a.date < b.date ? 1 : a.date > b.date ? -1 : 0
-	).slice(0, 3);
+	let blogs = (await getBlogs()).slice()
+	blogs.sort((a, b) =>{
+		if (a.date < b.date) { return 1 }
+		if (a.date > b.date ) { return -1 }
+		return 0
+	})
+	blogs.slice(0, 4);
 
-	return { blogs };
+	return { blogs, products: products.slice(0, 3) };
 };
