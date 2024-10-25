@@ -1,7 +1,7 @@
 <script>
-  export let data;
-	let title = 'Train Travel'
-	let desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+	export let data;
+	let title = "Train Travel";
+	let desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 </script>
 
 <svelte:head>
@@ -21,31 +21,27 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 	{#each data.blogs as blog}
 		<div class="lg:last:hidden">
-			<img
-				class="h-48 w-full object-cover md:h-56 lg:h-72"
-				src={blog.thumbnail.src}
-				alt={blog.thumbnail.alt}
-			/>
+			<img class="h-48 w-full object-cover md:h-56 lg:h-72" src={blog.thumbnail.src} alt={blog.thumbnail.alt} />
 			<h2 class="">{blog.title}</h2>
 			<blockquote class="">
-				<b>Date</b> <span>
-				{new Date(blog.date).toLocaleDateString(undefined, {
-					day: 'numeric',
-					month: 'short',
-					year: 'numeric',
-					hour: 'numeric',
-					minute: '2-digit',
-				})}</span>
-				<b>Tags</b> 
+				<b>Date</b>
+				<span>
+					{new Date(blog.date).toLocaleDateString(undefined, {
+						day: "numeric",
+						month: "short",
+						year: "numeric",
+						hour: "numeric",
+						minute: "2-digit",
+					})}</span
+				>
+				<b>Tags</b>
 				{#each blog.tags as tag}
 					<a href={`/blog?tags=${tag}`}>{tag}</a>
 				{/each}
 			</blockquote>
 			<p class="">{blog.excerpt}</p>
 			<p class="">
-				<a class="" href={`/blog/${blog.slug}`}>
-					Read more
-				</a>
+				<a class="" href={`/blog/${blog.slug}`}> Read more </a>
 			</p>
 		</div>
 	{/each}
@@ -53,19 +49,11 @@
 
 <div class="container mx-auto items-center gap-4 sm:flex">
 	<div class="flex-1">
-		<h2 class="text-center">
-			About Me
-		</h2>
-		<p class="text-center">
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, in!
-		</p>
+		<h2 class="text-center">About Me</h2>
+		<p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, in!</p>
 	</div>
 	<div class="flex-1">
-		<img
-			class="h-96 w-full object-cover object-top"
-			src="https://i.imgur.com/iO8RUVr.jpeg"
-			alt="Your Photo"
-		/>
+		<img class="h-96 w-full object-cover object-top" src="https://i.imgur.com/iO8RUVr.jpeg" alt="Your Photo" />
 	</div>
 </div>
 
